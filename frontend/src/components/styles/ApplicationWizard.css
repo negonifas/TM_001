@@ -1,0 +1,161 @@
+.wizard-page {
+  max-width: 1100px;
+  margin: 24px auto 40px;
+  padding: 0 16px;
+}
+
+.wizard-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  padding: 18px 20px 20px;
+}
+
+.wizard-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.wizard-head h2 {
+  margin: 0;
+}
+
+.wizard-notice {
+  background: #e6f6e6;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  color: #166534;
+  font-size: 14px;
+}
+
+.wizard-steps {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.wizard-step {
+  flex: 1;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.wizard-step--active {
+  border-color: #1f4db8;
+  background: #eef2ff;
+  color: #1f4db8;
+}
+
+.wizard-step--done {
+  border-color: #22c55e;
+  background: #ecfdf3;
+  color: #15803d;
+}
+
+.wizard-step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+
+.wizard-step--active .wizard-step-number {
+  background: #1f4db8;
+  color: #fff;
+}
+
+.wizard-step--done .wizard-step-number {
+  background: #22c55e;
+  color: #fff;
+}
+
+.wizard-body {
+  margin-bottom: 14px;
+}
+
+.wizard-subgroup h4 {
+  margin: 0 0 8px;
+}
+
+.wizard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px 16px;
+}
+
+.wizard-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wizard-field--full {
+  grid-column: 1 / -1;
+}
+
+.wizard-field label {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.wizard-field-readonly {
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  padding: 10px 12px;
+  color: #4b5563;
+}
+
+.wizard-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.wizard-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wizard-help {
+  margin-top: 18px;
+  background: #f5f9ff;
+  border-radius: 12px;
+  border: 1px solid #e0e7ff;
+  padding: 14px 16px;
+}
+
+.wizard-help h3 {
+  margin-top: 0;
+}
+
+.wizard-help ul {
+  margin: 6px 0 0 18px;
+  padding: 0;
+  color: #4b5563;
+}
+
+.back-btn.small,
+.secondary-btn.small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+

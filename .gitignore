@@ -1,0 +1,36 @@
+# Python / FastAPI
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+*.eggs/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+venv/
+.venv/
+backend/.venv/
+backend/.linux_venv/
+
+# Environment files
+.env
+backend/.env
+frontend/.env
+
+# Node / React
+node_modules/
+frontend/node_modules/
+frontend/build/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.idea/
+.vscode/

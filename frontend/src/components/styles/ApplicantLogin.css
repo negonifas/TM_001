@@ -1,0 +1,52 @@
+.login-page {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  padding: 24px 24px 28px;
+}
+
+.login-title {
+  margin: 0 0 6px;
+  color: #1f4db8;
+  font-size: 20px;
+}
+
+.login-subtitle {
+  margin: 0 0 16px;
+  color: #4b5563;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.login-form input {
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+}
+
+.login-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 6px;
+}
+

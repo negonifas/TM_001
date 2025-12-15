@@ -1,0 +1,15 @@
+.app-shell {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f1f5ff 0%, #eef2fb 100%);
+  color: #1f2933;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  font-family: inherit;
+}
