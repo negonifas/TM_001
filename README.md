@@ -37,27 +37,41 @@
 *   Убедитесь, что в `backend/.env` (скопируйте из `backend/.env.example`) указаны корректные параметры подключения к вашей БД.
 *   *Миграции БД запускаются автоматически при первом старте бэкенда.*
 
-### Шаги запуска:
+### Шаги запуска
 
-1.  **Запуск через единый скрипт (рекомендуется для WSL/Linux):**
-    *   Перейдите в каталог фронтенда: `cd frontend/`
-    *   Выполните команду: `npm run dev:full`
-    *   Этот скрипт активирует виртуальное окружение Python для бэкенда, запускает FastAPI-сервер и React-приложение.
-    *   **Остановка:** Для остановки обоих сервисов нажмите `Ctrl+C`.
+1. **Подготовка бэкенда (один раз, через uv):**
+   Установите uv, если его ещё нет (например, `pipx install uv`).
+   ```bash
+   cd backend
+   uv venv .wsl_venv
+   source .wsl_venv/bin/activate
+   uv pip install -r requirements.txt
+   ```
+   Убедитесь, что `backend/.env` содержит `database_url`, `auth_secret` и пр.
 
-2.  **Раздельный запуск (в разных терминалах):**
+2. **Подготовка фронтенда (один раз):**
+   ```bash
+   cd frontend
+   npm ci   # или npm install
+   ```
 
-    **Backend:**
-    *   Перейдите в каталог бэкенда: `cd backend/`
-    *   Создайте и активируйте виртуальное окружение (если еще не сделали):
-        ```bash
-        python3 -m venv .linux_venv
-        source .linux_venv/bin/activate
-        ```
-    *   Установите зависимости: `pip install -r requirements.txt`
-    *   Запустите API: `uvicorn app.main:app --reload`
+3. **Запуск всего (рекомендуется, WSL/Linux):**
+   ```bash
+   # из корня репозитория
+   npm run dev:full
+   ```
+   Скрипт `dev.sh` активирует `backend/.wsl_venv`, поднимает `uvicorn` и `npm start` для фронтенда.
+   Остановка: `Ctrl+C`.
 
-    **Frontend:**
-    *   Перейдите в каталог фронтенда: `cd frontend/`
-    *   Установите зависимости: `npm install`
-    *   Запустите UI: `npm start` (или `npm run dev` если используется Vite по умолчанию)
+4. **Раздельный запуск (если нужно в разных терминалах):**
+   *Backend*:
+   ```bash
+   cd backend
+   source .wsl_venv/bin/activate
+   uvicorn app.main:app --reload
+   ```
+   *Frontend*:
+   ```bash
+   cd frontend
+   npm start
+   ```

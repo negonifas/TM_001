@@ -1,0 +1,8 @@
+{
+  "name": "tm-001-root",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:full": "bash dev.sh"
+  }
+}
